@@ -1,0 +1,70 @@
+
+//size should be input such that the largest edge for diamond will be 2*size
+//for the below represented diamond, size is 5
+//         **
+//        ****
+//       ******
+//      ********
+//     **********
+//      ********
+//       ******
+//        ****
+//         **
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int size;
+    cout<<"Enter size of diamond : ";
+    cin>>size;
+    cout<<"\n";
+
+
+for(int i=1;i<=size-1;i++)
+{
+for(int j=1;j<=size;j++)
+{
+    if(j<=size-i)
+        cout<<" ";
+    else
+        cout<<"*";
+
+}
+for(int j=1;j<=size;j++)
+{
+    if(j<=size-i)
+        cout<<"";
+    else
+        cout<<"*";
+
+}
+cout<<"\n";
+}
+
+
+for(int i=size;i>=1;i--)
+{
+for(int j=1;j<=size;j++)
+{
+    if(j<=size-i)
+        cout<<" ";
+    else
+        cout<<"*";
+
+}
+for(int j=1;j<=size;j++)
+{
+    if(j<=size-i)
+        cout<<"";
+    else
+        cout<<"*";
+
+}
+cout<<"\n";
+}
+
+return 0;
+}
